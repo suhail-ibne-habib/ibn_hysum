@@ -7,9 +7,6 @@ export default function LatestNotice(){
             <h3 className="latest_notice__title">Latest</h3>
             <ul className="latest_notice__lists">
                 <SingleLatestNotice />
-                <SingleLatestNotice />
-                <SingleLatestNotice />
-                <SingleLatestNotice />
             </ul>
         </div>
     )

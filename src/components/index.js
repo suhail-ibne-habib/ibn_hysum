@@ -1,0 +1,10 @@
+export { default as Navbar } from './Nav';
+export { default as BreadCrumb } from './BreadCrumb'
+export { default as AboutUs } from './AboutUs';
+export { default as Characteristics } from './Characteristics';
+export { default as Courses } from './Courses';
+export { default as Hero } from './Hero';
+export { default as Notices } from './Notices';
+export { default as SecondSection } from './SecondSection';
+export { default as Section } from './templates/Section';
+export { default as Footer } from './Footer';

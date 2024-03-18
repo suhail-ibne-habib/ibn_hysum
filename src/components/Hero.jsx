@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroImg from '../assets/hero_img.png'
+import { Link } from 'react-router-dom'
 
 export default function Hero(){
     return(
@@ -12,8 +13,7 @@ export default function Hero(){
                         <p className="hero__para">বাংলাদেশ মাদরাসা শিক্ষাবোর্ডের শিক্ষাক্রম ও পাঠ্যসূচীর অনুসরণে প্লে-৫ম শ্রেণি 
     ও পর্যায়ক্রমে আলিম শ্রেণি পর্যন্ত পাঠদান</p>
                         <div className="btns">
-                            <a href="#" className="btn">Register</a>
-                            <a href="#" className="btn">Apply</a>
+                            <Link to="/about" className="btn">About Us</Link>
                         </div>
                     </div>
                 </div>

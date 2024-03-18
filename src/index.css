@@ -26,6 +26,11 @@ section{
   padding-right: 20px;
 }
 
+a{
+  text-decoration: none;
+  color: var(--main-color);
+}
+
 ul{
   list-style: none;
 }
@@ -55,6 +60,10 @@ img{
 
 .justify-space-between{
   justify-content: space-between;
+}
+
+.justify-content-end{
+  justify-content: flex-end;
 }
 
 .align-center{
@@ -121,6 +130,15 @@ img{
   margin-bottom: 30px;
 }
 
+.float-icon-left{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 20px 30px;
+  background-color: var(--main-color);
+  color: #fff;
+}
+
 /* Navbar styling starts */
 nav{
   padding-top: 20px;
@@ -155,6 +173,37 @@ nav{
 
 #primary-menu .nav-item.login-btn .nav-link{
   color: #fff;
+}
+
+/* BreadCrumb starts */
+.breadcrumb-wrapper{
+  background-color: var(--main-color);
+  background-image: url('../src/assets/Hero\ Banner.png');
+  padding: 50px;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.breadcrumb-wrapper nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.breadcrumb-wrapper nav span{
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-right: 10px;  
+}
+
+.breadcrumb-wrapper nav a{
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-decoration: none;
 }
 
 /* Hero section starts */
@@ -337,6 +386,62 @@ nav{
   font-size: 1.2em;
 }
 
+.course__feature {
+  height: 300px;
+}
+
+.course__feature img{
+  height: 100%;
+}
+
+/* Contact wrapper starts */
+
+.contact-wrapper{
+  background: var(--main-color);
+  border-radius: var(--border-radius);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  min-height: 400px;
+  padding: 50px;
+}
+
+.contact-wrapper .title{
+  font-size: 2em;
+  color: white;
+}
+
+.contact-wrapper h3{
+  color: #fff;
+}
+
+.contact-wrapper ul{
+  margin-top: 1.2em;
+}
+
+.contact-wrapper li{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-wrapper li span:nth-child(1){
+  background-color: #fff;
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.contact-wrapper li span{
+  font-size: 1.6em;
+  color: #fff;
+  font-size: bold;
+}
+
 /* Footer starts */
 footer{
   background-image: url(./assets/footer_background.png) ;
@@ -372,6 +477,142 @@ footer{
   color: #fff;
   text-decoration: none;
   font-size: 1.4em;
+}
+
+/* Image Gallery */
+
+/* Our Teachers */
+.our-team {
+  padding: 30px 0 40px;
+  margin-bottom: 30px;
+  background-color: #f7f5ec;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.our-team .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+.our-team .picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .picture::before {
+  height: 100%;
+}
+
+.our-team .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.our-team .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.our-team .title {
+  display: block;
+  font-size: 15px;
+  color: #4e5052;
+  text-transform: capitalize;
+}
+
+.our-team .social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .social {
+  bottom: 0;
+}
+
+.our-team .social li {
+  display: inline-block;
+}
+
+.our-team .social li a {
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: white;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.our-team .social li a:hover {
+  color: #1369ce;
+  background-color: #f7f5ec;
+}
+
+/* Job */
+.jobs{
+  margin-top: 5rem;
+}
+
+.job{
+  padding: 3rem;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+}
+
+.job .job__title{
+  font-size: 1.2em;
+}
+
+.job .job__footer{
+  margin-top: 1rem;
+}
+
+.job .job__footer .job__type{
+  display: flex;
+  align-items: center;
+}
+
+.job .job__footer .job__type .job__footer_icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }
 
 @media (min-width: 576px){
